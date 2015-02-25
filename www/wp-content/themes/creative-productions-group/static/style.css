@@ -1,0 +1,139 @@
+/**
+ * Theme Name: Creative Productions Group
+ * Theme URI: https://creativeproductions.com
+ * Description: A fully responsive, adaptive and custom theme for CPG.
+ * Author: Adam Carter
+ * Author URI: http://adamkristopher.com
+ * Version: 1.0
+ */
+
+@import url( //fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic );
+
+body {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	background-image: url('http://creativeproductionsgroup.com/wp-content/themes/creativeproductions.com/lb_cpg_images/grain.jpg');
+
+	  -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+p {
+	font-size: 1.4em;
+	line-height: 1.6em;
+}
+
+h2,
+h3,
+h4 {
+	font-weight: 400;
+	margin: 20px 0;
+	color: #dc5b49;
+}
+
+h2,
+h3,
+p {
+	text-align: center;
+}
+
+#main-nav {
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+}
+
+#main-nav ul {
+	float: right;
+}
+
+#main-nav ul li {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 30px;
+	font-size: 1.2em;
+	color: #fff;
+}
+
+header {
+	position: relative;
+}
+
+header #intro {
+	position: absolute;
+	top: 60%;
+	left: 5%;
+	width: 95%;
+	color: #fff;
+}
+
+header #intro .heading {
+	display: block;
+	width: 75%;
+}
+
+header #intro .heading h1 {
+	margin: 0 0 15px 0;
+	white-space: nowrap;
+	font-weight: 400;
+}
+
+header #intro .tagline {
+	display: block;
+	margin-bottom: 20px;
+}
+
+header #intro .tagline span {
+	width: 100%;
+	padding: 2px 5px;
+	background-color: #dc5b49;
+}
+
+header #intro .intro-buttons button {
+	margin-right: 15px;
+	padding: 10px;
+	font-size: 1.2em;
+	background-color: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+}
+
+header #intro .intro-buttons button:hover {
+	border-color: #dc5b49;
+	color: #dc5b49;
+	cursor: pointer;
+}
+
+header img {
+	width: 100%;
+	height: auto;
+}
+
+section.grid-container {
+	padding: 20px;
+}
+
+#work .box {
+	padding: 20px;
+}
+
+#team,
+#brands {
+	background-color: #dc5b49;
+}
+
+#team h2,
+#team p,
+#brands h2,
+#brands p {
+	color: #fff;
+}
