@@ -21,7 +21,7 @@ get_header() ?>
 
 			<div class="grid-45">
 				<div class="tagline">
-					<span>Making awesome stuff...consistently for 29 years</span>
+					<span>aking awesome stuff...consistently for 29 years</span>
 				</div>
 			</div>
 
