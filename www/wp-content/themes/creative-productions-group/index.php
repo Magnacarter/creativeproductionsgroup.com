@@ -8,7 +8,11 @@
 get_header() ?>
 
 <div class="x">
-	<img src="<?php echo esc_url( bloginfo('stylesheet_directory') ) . '/img/x.png' ?>"></img>
+	<img src="https://creativeproductionsgroup.com/wp-content/uploads/2015/03/x.png" height="35" width="35"></img>
+</div>
+
+<div id="video-container">
+	<?php the_field( 'watch_video' ) ?>
 </div>
 
 	<header>

@@ -43,35 +43,17 @@ jQuery( document ).ready( function($) {
 	var watch = $( '.watch' );
 	watch.click( function() {
 		$( 'body' ).append( '<div id="wrapper"></div>' );
-		$( '#wrapper' ).fadeIn( function() {
-			$( '.splash_text' ).hide( 'slow' );
-			$( 'nav' ).hide( 'slow' );
-			$( '.hamburger_nav' ).hide( 'slow' );
-		//used: wp_localize_script for the iframe embed via cpg_script.iframe
-			$( '#wrapper' ).append( '<div id="lightbox">' + cpg_script.iframe + '</div>' );
-			$( '#lightbox' ).fadeIn();
-			$( '.x' ).fadeIn();
-		//close lightbox and show hidden elements.
-			$( '.x' ).click( function() {
-				$( '#lightbox' ).fadeOut( function() {
-					$( '#lightbox iframe' ).remove();
-					$( '#wrapper' ).fadeOut( function() {
-						$( '.x' ).fadeOut();
-					var windowWidth = $( window ).width();
-					console.log(windowWidth);
-					if ( windowWidth > 1025 ) {
-						var nav = $( 'nav' );
-						nav.fadeIn( 'slow' );
-					} else if ( windowWidth <= 1025 ) {
-						var hamburger_nav = $( '.hamburger_nav' );
-						hamburger_nav.fadeIn( 'slow' );
-					}
-						$( '.splash_text' ).fadeIn( 'slow' );
-					});
-				});
-			});
-		});
+		$( '#wrapper' ).show();
+		$( '#video-container' ).show();
+		$( '.x' ).show();
 	});
+	$( '.x' ).click( function() {
+		$( '#wrapper' ).hide();
+		$( '#video-container' ).hide();
+		$( '.x' ).hide();
+	});
+
+
 
 /*Project lightboxes with description.
 var $project = $( '.single_work img' );
