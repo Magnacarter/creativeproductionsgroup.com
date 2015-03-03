@@ -11,7 +11,7 @@
 	<body <?php body_class() ?>>
 
 			<div class="header_logo">
-				<a href="<?php echo get_home_url() ?>"><img src="<?php the_field( 'nav_logo' ) ?>" height="40" width="400"/></a>
+				<a href="<?php echo get_home_url() ?>"><img src="<?php the_field( 'nav_logo', 'options' ) ?>" height="40" width="400"/></a>
 			</div>
 
 		<?php if( is_front_page() ) : ?>
