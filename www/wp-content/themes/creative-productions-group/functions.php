@@ -28,7 +28,7 @@ function cpg_enqueue_scripts() {
 
 	wp_enqueue_script('cpg_script', plugin_dir_url( __FILE__ ) . 'js/theme.js');
 	wp_localize_script('cpg_script', 'cpg_script_vars', array(
-			'iframe' => __( echo get_the_field( 'watch_video' ) );
+			'iframe' => __( the_field( 'watch_video' ) )
 		)
 	);
 }
