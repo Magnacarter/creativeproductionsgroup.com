@@ -15,7 +15,7 @@
 					<img src="<?php the_field( 'testimonial_image' ) ?>" height="175" width="175"/>
 				</div>
 
-				<div class="testimonial grid-50">
+				<div class="testimonial grid-40">
 					<p><?php the_field( 'testimonial' ) ?></p>
 				</div>
 
