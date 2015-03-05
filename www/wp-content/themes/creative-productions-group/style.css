@@ -302,36 +302,27 @@ nav ul li:hover ul{
 /*===================================
  *Staff
  ==================================*/
-#cpg_homepage_widget .widget {
-	z-index: 100;
+#staff-boxes {
+	margin-top: -55px;
+}
+
+.single-worker {
 	position: relative;
 }
 
-#cpg_homepage_widget .widget > h3,
-#cpg_homepage_widget .widget > p {
+.worker-hover {
 	display: none;
-}
-
-#cpg_homepage_widget .widget a {
-	display: block;
-}
-
-#cpg_homepage_widget img {
-	height: auto;
-	width: 100%;
-}
-
-.staff_hover {
-	display: none;
-	cursor: pointer;
-	top: 0;
 	position: absolute;
-	background: rgba(0, 0, 0, 0.7);
+	margin-top: -101%;
 	height: 98.8%;
 	width: 100%;
+	text-align: center;
+	background: rgba(40, 41, 45, 0.8);
+	z-index: 1;
 }
 
-.staff_hover h2 {
+.worker-hover h2 {
+	padding-top: 70px;
 	display: block;
 	color: #fff;
 	text-align: center;
@@ -339,7 +330,7 @@ nav ul li:hover ul{
 	font-size: 1.3em;
 }
 
-.staff_hover h3 {
+.worker-hover h3 {
 	display: block;
 	text-align: center;
 	color: #fff;

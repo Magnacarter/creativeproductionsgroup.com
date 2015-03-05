@@ -53,8 +53,6 @@ jQuery( document ).ready( function($) {
 		$( '.x' ).hide();
 	});
 
-
-
 /*Project lightboxes with description.
 var $project = $( '.single_work img' );
 
@@ -82,24 +80,17 @@ var $project = $( '.single_work img' );
 		return false;
 	});
 
-//Fade staff info div over staff widget imgs.
-	var widget = $( '#cpg_homepage_widget' ).children();
+//Hover elements for team members
+var teamMember = $( '.single-worker' );
 
-	widget.hover(
-		function() {
-			$( this ).append( '<div class="staff_hover"></div>' );
-			var $name = $( this ).children( 'a' ).children( 'img' ).attr( 'alt' );
-			var $role = $( this ).children( 'p' ).html();
-			var staff_hover = $( '.staff_hover' );
-			staff_hover.append( '<h2>' + $name + '</h2>' );
-			staff_hover.append( '<h3>' + $role + '</h3>' );
-			staff_hover.slideToggle( 200 );
-		},
-		function() {
-			$( '.staff_hover' ).slideToggle( 0, function() {
-				$( this ).remove();
-			});
-	});
+teamMember.hover(
+	function() {
+		$( this ).find( '.worker-hover' ).fadeIn(400);
+	},
+	function() {
+		$( this ).find( '.worker-hover' ).hide();
+	}
+);
 
 //Gives the nav a border when page is scrolled past the background image, works in reverse.
 	var url = location.pathname;

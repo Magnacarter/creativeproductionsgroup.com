@@ -118,3 +118,43 @@ function cpg_projects() {
 register_post_type( 'Projects', $args );
 }
 add_action( 'init', 'cpg_projects' );
+
+/**
+ * Custom Post Type: Workers
+ */
+function cpg_workers() {
+	$labels = array(
+		'name'               => 'Workers',
+		'singular_name'      => 'Workers',
+		'add_new'            => 'Add New',
+		'add_new_item'       => 'Add New Workers',
+		'edit_item'          => 'Edit Workers',
+		'new_item'           => 'New Workers',
+		'all_items'          => 'All Workers',
+		'view_item'          => 'View Workers',
+		'search_items'       => 'Search Workers',
+		'not_found'          => 'No event found',
+		'not_found_in_trash' => 'No event found in Trash',
+		'parent_item_colon'  => '',
+		'menu_name'          => 'Workers',
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'workers' ),
+		'capability_type'    => 'post',
+		'taxonomies'         => array( 'category', 'post_tag' ),
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor' ),
+	);
+
+register_post_type( 'Workers', $args );
+}
+add_action( 'init', 'cpg_workers' );

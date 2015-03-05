@@ -81,7 +81,7 @@ get_header() ?>
 		</div>
 	</section>
 
-	<?php get_sidebar( 'homepage' ) ?>
+	<?php get_template_part( 'staff' ) ?>
 
 	<section id="testimonials" class="grid-container flexslider">
 		<div class="grid-100">
