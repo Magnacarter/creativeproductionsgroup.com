@@ -681,6 +681,28 @@ register_field_group(array (
 			'preview_size' => 'thumbnail',
 			'library' => 'all',
 		),
+		array (
+			'key' => 'field_54f7dee4022b9',
+			'label' => 'Linkedin URL',
+			'name' => 'linkedin_url',
+			'prefix' => '',
+			'type' => 'text',
+			'instructions' => 'Enter the workers url to their linkedin page.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
 	),
 	'location' => array (
 		array (
