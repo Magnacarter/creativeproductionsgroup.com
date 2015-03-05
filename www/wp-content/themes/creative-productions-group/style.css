@@ -404,8 +404,9 @@ nav ul li:hover ul{
  * Client Logo
  ==================================*/
 .client-logo {
-	margin: 0 100px;
+	margin: 0 8%;
 	width: 100px;
+	text-align: center;
 }
 
 #client-logo-slider {
