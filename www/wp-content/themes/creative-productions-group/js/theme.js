@@ -143,12 +143,4 @@ teamMember.hover(
 				left: '-=22.4%',
 			},500);
 	});
-
-
-
-
-
-
-
-
 });//Document ready end.

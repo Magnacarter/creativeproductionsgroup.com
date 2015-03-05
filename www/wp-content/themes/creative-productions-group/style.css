@@ -397,10 +397,16 @@ nav ul li:hover ul{
 }
 
 /*===================================
- *Brands
+ * Client Logo
  ==================================*/
-.brand_list {
-	padding: 0px 240px 0px 240px;
+.client-logo {
+	margin: 0 100px;
+	width: 100px;
+}
+
+#client-logo-slider {
+	margin-top: -10px;
+	padding-bottom: 110px;
 }
 
 /*===================================

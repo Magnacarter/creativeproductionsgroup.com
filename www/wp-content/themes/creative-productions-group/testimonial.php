@@ -4,8 +4,7 @@
 	$args = array(
 			'post_type' => 'testimonial',
 		);
-	$the_query = new WP_Query( $args );
-	?>
+	$the_query = new WP_Query( $args ) ?>
 
 	<?php if ( have_posts() ) :
 
@@ -26,11 +25,7 @@
 				</div>
 			</li>
 
-	<?php
-		endwhile;
+	<?php endwhile; endif;
 
-		endif;
-
-		wp_reset_postdata();
-	?>
+	wp_reset_postdata() ?>
 	</ul>

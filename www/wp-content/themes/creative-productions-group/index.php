@@ -96,7 +96,7 @@ get_header() ?>
 			<h2>We have great clients</h2>
 		</div>
 
-		<?php get_template_part( 'brands' ) ?>
+		<?php get_template_part( 'client-logos' ) ?>
 	</section>
 
 	<!--<section id="contact" class="grid-container">

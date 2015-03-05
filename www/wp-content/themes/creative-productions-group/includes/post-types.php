@@ -158,3 +158,43 @@ function cpg_workers() {
 register_post_type( 'Workers', $args );
 }
 add_action( 'init', 'cpg_workers' );
+
+/**
+ * Custom Post Type: Clients
+ */
+function cpg_clients() {
+	$labels = array(
+		'name'               => 'Clients',
+		'singular_name'      => 'Clients',
+		'add_new'            => 'Add New',
+		'add_new_item'       => 'Add New Clients',
+		'edit_item'          => 'Edit Clients',
+		'new_item'           => 'New Clients',
+		'all_items'          => 'All Clients',
+		'view_item'          => 'View Clients',
+		'search_items'       => 'Search Clients',
+		'not_found'          => 'No event found',
+		'not_found_in_trash' => 'No event found in Trash',
+		'parent_item_colon'  => '',
+		'menu_name'          => 'Clients',
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'clients' ),
+		'capability_type'    => 'post',
+		'taxonomies'         => array( 'category', 'post_tag' ),
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor' ),
+	);
+
+register_post_type( 'Clients', $args );
+}
+add_action( 'init', 'cpg_clients' );

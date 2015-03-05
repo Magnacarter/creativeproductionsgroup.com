@@ -738,3 +738,117 @@ register_field_group(array (
 ));
 
 endif;
+
+if( function_exists('register_field_group') ):
+
+register_field_group(array (
+	'key' => 'group_54f889ba7297d',
+	'title' => 'Clients Logos',
+	'fields' => array (
+		array (
+			'key' => 'field_54f889cf65586',
+			'label' => 'Client Logo 1',
+			'name' => 'client_logo_1',
+			'prefix' => '',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+		),
+		array (
+			'key' => 'field_54f889ee65587',
+			'label' => 'Client Logo 2',
+			'name' => 'client_logo_2',
+			'prefix' => '',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+		),
+		array (
+			'key' => 'field_54f88a0065588',
+			'label' => 'Client Logo 3',
+			'name' => 'client_logo_3',
+			'prefix' => '',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+		),
+		array (
+			'key' => 'field_54f88a0e65589',
+			'label' => 'Client Logo 4',
+			'name' => 'client_logo_4',
+			'prefix' => '',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'clients',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => array (
+		0 => 'permalink',
+		1 => 'the_content',
+		2 => 'excerpt',
+		3 => 'custom_fields',
+		4 => 'discussion',
+		5 => 'comments',
+		6 => 'revisions',
+		7 => 'slug',
+		8 => 'author',
+		9 => 'format',
+		10 => 'page_attributes',
+		11 => 'featured_image',
+		12 => 'categories',
+		13 => 'tags',
+		14 => 'send-trackbacks',
+	),
+));
+
+endif;
