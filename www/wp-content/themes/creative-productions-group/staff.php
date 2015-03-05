@@ -20,7 +20,7 @@ if ( $workers->have_posts() ) : ?>
 			<div class="worker-hover grid-20 tablet-grid-50 mobile-grid-50">
 				<h2><?php the_field( 'worker_name' ) ?></h2>
 				<h3><?php the_field( 'worker_position' ) ?></h3>
-				<a href="<?php the_field( 'linkedin_url' ) ?>"><img src="<?php the_field( 'li_icon' ) ?>"/></a>
+				<a href="<?php the_field( 'linkedin_url' ) ?>" target="_blank"><img src="<?php the_field( 'li_icon' ) ?>"/></a>
 			</div>
 		</div>
 	<?php endwhile; endif;
