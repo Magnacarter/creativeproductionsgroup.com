@@ -134,13 +134,13 @@ teamMember.hover(
 			$( '.pop-up-box' ).hide(300);
 
 			$( '.pop-up' ).animate({
-				left: '+=22.4%',
+				left: '+=24.8%',
 			},500);
 		},
 		function(){
 			$( '.pop-up-box' ).show(300);
 			$( '.pop-up' ).animate({
-				left: '-=22.4%',
+				left: '-=24.8%',
 			},500);
 	});
 });//Document ready end.
