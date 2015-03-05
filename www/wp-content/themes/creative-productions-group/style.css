@@ -343,6 +343,7 @@ nav ul li:hover ul{
 .testimonial {
 	margin-left: 58px;
 }
+
 .testimonial_container {
 	height: 490px;
 	position: relative;
@@ -1031,6 +1032,10 @@ footer h5 {
 	.caption {
 		top: 60%;
 		left: 0%;
+	}
+
+	.testimonial {
+		margin-left: 0px;
 	}
 }
 
