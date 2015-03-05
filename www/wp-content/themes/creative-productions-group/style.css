@@ -340,6 +340,9 @@ nav ul li:hover ul{
 /*===================================
  *Testimonials
  ==================================*/
+.testimonial {
+	margin-left: 58px;
+}
 .testimonial_container {
 	height: 490px;
 	position: relative;
