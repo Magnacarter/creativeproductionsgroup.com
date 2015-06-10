@@ -1,7 +1,6 @@
 <?php
 /**
  * Loop through all the CPG projects
- *
  */
 $args = array(
 	'post_type' => 'projects',

@@ -16,26 +16,27 @@
 
 		<?php if( is_front_page() ) : ?>
 
-			<nav>
+			<nav class="main-nav">
 				<?php wp_nav_menu( array( 'menu' => 'main-nav' ) ); ?>
 			</nav>
 
 		<?php else : ?>
 
-			<nav>
+			<nav class="main-nav">
 				<?php wp_nav_menu( array( 'menu' => 'hamburger-nav' ) ); ?>
 			</nav>
 
 		<?php endif ?>
 
-			<div class="grid-container hamburger_nav">
-				<div class="hamburger grid-20">
-					<a href=""><img height="80" width="80" src="<?php echo bloginfo( 'stylesheet_directory' ) . '/img/hamburger.png' ?>"></a></img>
-				</div>
-				<div class="toggle_menu">
-					<?php wp_nav_menu( array( 'menu' => 'hamburger-nav' ) ); ?>
-				</div>
+			<div class="hamburger">
+				<a href="" class="toggle-menu menu-left push-body"><img height="40" width="40" src="<?php the_field( 'hamburger_icon', 'options' ) ?>"></a></img>
 			</div>
+
+			<nav class="mobile-nav cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
+				<?php wp_nav_menu( array( 'menu' => 'push-nav' ) ); ?>
+			</nav>
+
+
 
 
 

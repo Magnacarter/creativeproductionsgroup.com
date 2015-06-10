@@ -1,8 +1,6 @@
 <?php
 /**
  * Brands
- *
- *
  * Loop through the CPT 'portfolio' and retrieve logos
  */
 $args = array(

@@ -1,19 +1,34 @@
 jQuery( document ).ready( function($) {
 //Flexslider
-	$( window ).load(function() {
-		var $flexslider = $('.flexslider');
-			$flexslider.flexslider();
-	});
-
-	var $flexslider = $('.flexslider');
-		$flexslider.flexslider({
-		manualControls: ".flex-control-nav li",
-		useCSS: false /* Chrome fix*/
+	$(window).load(function() {
+		$('.flexslider').flexslider({
+			slideshowSpeed: 6000,
+			controlNav: true,
+			directionNav: false,
+			animationSpeed: 900,
+			direction: "horizontal",
+			animation: "slide", //String: Select your animation type, "fade" or "slide"
+			prevText: "", //String: Set the text for the "previous" directionNav item
+			nextText: "",
+		});
 	});
 
 //Fittext for splashpage
 	$( '#intro .heading h1' ).fitText( 1, { maxFontSize: '60px' } );
 	$( '#intro .tagline' ).fitText( 2.5, { maxFontSize: '30px' } );
+
+//Sub nav appear slow.
+	var $navServices = $( 'nav ul li' );
+	var $subMenu = $( 'nav ul ul' );
+
+	$navServices.hover(
+		function() {
+			$( this ).find( $subMenu ).slideToggle(400);
+		}
+	);
+
+//Push Menu for tablet and mobile
+	$('.toggle-menu').jPushMenu();
 
 //Hamburger navigation
 	var hamburger = $( '.hamburger a' );
@@ -32,10 +47,10 @@ jQuery( document ).ready( function($) {
 	});
 
 //Scroll to next element of HP via the 'Learn More' button.
-	$( '#menu-item-18' ).click( function( e ) {
+	$( '#menu-item-554' ).click( function( e ) {
 		e.preventDefault();
 		$( 'html, body' ).animate( {
-			scrollTop: $( '#contact' ).offset().top
+			scrollTop: $( 'footer' ).offset().top
 		}, 1000);
 	});
 
@@ -53,44 +68,22 @@ jQuery( document ).ready( function($) {
 		$( '.x' ).hide();
 	});
 
-/*Project lightboxes with description.
-var $project = $( '.single_work img' );
-
-	$project.click( function(e) {
-		e.preventDefault();
-		var img_url = $( this ).attr( 'src' );
-		var caption_text = $( this ).attr( 'alt' );
-		$( 'body' ).append( '<div id="project_wrap"><div class="grid-100 pro_img"><img height="435" width="780"/></div><div class="caption grid-50"><p></p></div></div>' );
-		$( '#project_wrap img' ).attr( 'src', img_url );
-		$( '#project_wrap p' ).text( caption_text );
-		var project_wrap = $( '#project_wrap' );
-		$( '.hamburger_nav' ).fadeOut();
-		project_wrap.fadeIn();
-
-		//click overlay to remove lightbox
-		project_wrap.click( function() {
-			project_wrap.fadeOut();
-			$( '.hamburger_nav' ).fadeIn();
-		});
-	});
-*/
-
 //Disable href in brand imgs
 	$( '.logo p a' ).click(function() {
 		return false;
 	});
 
-//Hover elements for team members
-var teamMember = $( '.single-worker' );
+	//Hover elements for single worker on homepage
+	var singleWorker = $( '.single-worker' );
 
-teamMember.hover(
-	function() {
-		$( this ).find( '.worker-hover' ).fadeIn(400);
-	},
-	function() {
-		$( this ).find( '.worker-hover' ).hide();
-	}
-);
+	singleWorker.hover(
+		function() {
+			$( this ).find( '.worker-hover' ).fadeIn(400);
+		},
+		function() {
+			$( this ).find( '.worker-hover' ).hide();
+		}
+	);
 
 //Gives the nav a border when page is scrolled past the background image, works in reverse.
 	var url = location.pathname;

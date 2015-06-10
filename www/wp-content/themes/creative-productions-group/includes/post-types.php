@@ -66,7 +66,6 @@ function cpg_contacts() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'contact' ),
 		'capability_type'    => 'post',
 		'taxonomies'         => array( 'category', 'post_tag' ),
 		'has_archive'        => true,
@@ -106,13 +105,13 @@ function cpg_projects() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'project' ),
+		'rewrite'            => array( 'slug' => 'projects' ),
 		'capability_type'    => 'post',
 		'taxonomies'         => array( 'category', 'post_tag' ),
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor' ),
+		'supports'           => array( 'title', 'editor', 'thumbnail' ),
 	);
 
 register_post_type( 'Projects', $args );

@@ -143,9 +143,9 @@ if(function_exists("register_field_group"))
 		'location' => array (
 			array (
 				array (
-					'param' => 'post_type',
+					'param' => 'page_type',
 					'operator' => '==',
-					'value' => 'page',
+					'value' => 'front_page',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
@@ -155,20 +155,6 @@ if(function_exists("register_field_group"))
 			'position' => 'normal',
 			'layout' => 'no_box',
 			'hide_on_screen' => array (
-				0 => 'permalink',
-				1 => 'the_content',
-				2 => 'excerpt',
-				3 => 'custom_fields',
-				4 => 'discussion',
-				5 => 'comments',
-				6 => 'revisions',
-				7 => 'slug',
-				8 => 'author',
-				9 => 'format',
-				10 => 'featured_image',
-				11 => 'categories',
-				12 => 'tags',
-				13 => 'send-trackbacks',
 			),
 		),
 		'menu_order' => 0,
@@ -311,128 +297,6 @@ if(function_exists("register_field_group"))
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
-		'id' => 'acf_info-graph',
-		'title' => 'Info Graph',
-		'fields' => array (
-			array (
-				'key' => 'field_54b063f83e671',
-				'label' => 'Header',
-				'name' => 'header',
-				'type' => 'wysiwyg',
-				'instructions' => 'Enter the title of the section.',
-				'default_value' => '',
-				'toolbar' => 'full',
-				'media_upload' => 'yes',
-			),
-			array (
-				'key' => 'field_54b0642ac520d',
-				'label' => 'Header2',
-				'name' => 'header2',
-				'type' => 'wysiwyg',
-				'instructions' => 'Enter the title of the second info graph',
-				'default_value' => '',
-				'toolbar' => 'full',
-				'media_upload' => 'yes',
-			),
-			array (
-				'key' => 'field_54b06445c520e',
-				'label' => 'Header3',
-				'name' => 'header3',
-				'type' => 'wysiwyg',
-				'instructions' => 'Enter the title of the 3rd info graph',
-				'default_value' => '',
-				'toolbar' => 'full',
-				'media_upload' => 'yes',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'page',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-				0 => 'permalink',
-				1 => 'the_content',
-				2 => 'excerpt',
-				3 => 'custom_fields',
-				4 => 'discussion',
-				5 => 'comments',
-				6 => 'revisions',
-				7 => 'slug',
-				8 => 'author',
-				9 => 'format',
-				10 => 'featured_image',
-				11 => 'categories',
-				12 => 'tags',
-				13 => 'send-trackbacks',
-			),
-		),
-		'menu_order' => 0,
-	));
-}
-if(function_exists("register_field_group"))
-{
-	register_field_group(array (
-		'id' => 'acf_info-graph',
-		'title' => 'Info Graph',
-		'fields' => array (
-			array (
-				'key' => 'field_54b06445c520e',
-				'label' => 'Header3',
-				'name' => 'header3',
-				'type' => 'wysiwyg',
-				'instructions' => 'Enter the title of the 3rd info graph',
-				'default_value' => '',
-				'toolbar' => 'full',
-				'media_upload' => 'yes',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'page',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-				0 => 'permalink',
-				1 => 'the_content',
-				2 => 'excerpt',
-				3 => 'custom_fields',
-				4 => 'discussion',
-				5 => 'comments',
-				6 => 'revisions',
-				7 => 'slug',
-				8 => 'author',
-				9 => 'format',
-				10 => 'featured_image',
-				11 => 'categories',
-				12 => 'tags',
-				13 => 'send-trackbacks',
-			),
-		),
-		'menu_order' => 0,
-	));
-}
-if(function_exists("register_field_group"))
-{
-	register_field_group(array (
 		'id' => 'acf_home-page',
 		'title' => 'Home Page',
 		'fields' => array (
@@ -469,9 +333,9 @@ if(function_exists("register_field_group"))
 		'location' => array (
 			array (
 				array (
-					'param' => 'post_type',
+					'param' => 'page_type',
 					'operator' => '==',
-					'value' => 'page',
+					'value' => 'front_page',
 					'order_no' => 0,
 					'group_no' => 0,
 				),

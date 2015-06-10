@@ -1,10 +1,10 @@
-<section id="cpg_homepage_widget" class="grid-container">
+<section id="cpg_sidebar" class="grid-container">
 
 	<?php
-	if ( is_active_sidebar( 'cpg_homepage_widget' ) ) {
-		dynamic_sidebar( 'cpg_homepage_widget' );
+	if ( is_active_sidebar( 'cpg_sidebar' ) ) {
+		dynamic_sidebar( 'cpg_sidebar' );
 	} else {
-		echo 'Insert staff widgets.';
+		echo 'Insert Blog Widgets.';
 	}
 	?>
 

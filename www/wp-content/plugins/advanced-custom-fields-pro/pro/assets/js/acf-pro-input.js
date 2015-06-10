@@ -104,40 +104,19 @@
 			
 			// vars
 			var $th = $table.find('> thead > tr > th'),
-				available_width = 100,
-				count = 0;
-			
-			
-			// accomodate for order / remove
-			if( $th.filter('.order').exists() ) {
-				
-				available_width = 93;
-				
-			}
+				available_width = 100;
 			
 			
 			// clear widths
-			$th.removeAttr('width');
+			$th.css('width', 'auto');
 			
 			
 			// update $th
 			$th = $th.not('.order, .remove, .hidden-by-conditional-logic');
-				
+			
 			
 			// set custom widths first
 			$th.filter('[data-width]').each(function(){
-				
-				// bail early if hit limit
-				if( (count+1) == $th.length ) {
-					
-					return false;
-					
-				}
-				
-				
-				// increase counter
-				count++;
-				
 				
 				// vars
 				var width = parseInt( $(this).attr('data-width') );
@@ -148,32 +127,24 @@
 				
 				
 				// set width
-				$(this).attr('width', width + '%');
+				$(this).css('width', width + '%');
 				
 			});
 			
 			
+			// update $th
+			$th = $th.not('[data-width]');
+			
+			
 			// set custom widths first
-			$th.not('[data-width]').each(function(){
-				
-				// bail early if hit limit
-				if( (count+1) == $th.length ) {
-					
-					return false;
-					
-				}
-				
-				
-				// increase counter
-				count++;
-				
+			$th.each(function(){
 				
 				// cal width
 				var width = available_width / $th.length;
 				
 				
 				// set width
-				$(this).attr('width', width + '%');
+				$(this).css('width', width + '%');
 				
 			});
 			
@@ -290,7 +261,7 @@
 			
 			
 			// disable clone inputs
-			this.$clone.find('[name]').attr('disabled', 'disabled');
+			this.$clone.find('input, textarea, select').attr('disabled', 'disabled');
 						
 			
 			// render
@@ -386,8 +357,8 @@
 			$html.removeClass('acf-clone');
 			
 			
-			// enable inputs
-			$html.find('[name]').removeAttr('disabled');
+			// enable inputs (ignore inputs disabled for life)
+			$html.find('input, textarea, select').not('.acf-disabled').removeAttr('disabled');
 			
 			
 			// add row
@@ -414,7 +385,7 @@
 			return $html;
 		},
 		
-		remove : function( e ){
+		remove: function( e ){
 			
 			// reference
 			var self = this,
@@ -434,13 +405,17 @@
 			}
 			
 			
-			// trigger change to allow attachmetn save
-			this.$input.trigger('change');
-				
-				
+			// action for 3rd party customization
+			acf.do_action('remove', $tr);
+			
+			
 			// animate out tr
 			acf.remove_tr( $tr, function(){
 				
+				// trigger change to allow attachment save
+				self.$input.trigger('change');
+			
+			
 				// render
 				self.doFocus($field).render();
 				
@@ -568,7 +543,7 @@
 			
 			
 			// disable clone inputs
-			this.$clones.find('[name]').attr('disabled', 'disabled');
+			this.$clones.find('input, textarea, select').attr('disabled', 'disabled');
 						
 			
 			// render
@@ -896,8 +871,8 @@
 				$html = $( html );
 			
 			
-			// enable inputs
-			$html.find('[name]').removeAttr('disabled');
+			// enable inputs (ignore inputs disabled for life)
+			$html.find('input, textarea, select').not('.acf-disabled').removeAttr('disabled');
 			
 							
 			// hide no values message
@@ -933,7 +908,11 @@
 			
 		},
 		
-		remove : function( e ){
+		remove: function( e ){
+			
+			// reference
+			var self = this;
+			
 			
 			// vars
 			var $layout	= e.$el.closest('.layout');
@@ -958,13 +937,17 @@
 			}
 			
 			
-			// trigger change
-			this.$input.trigger('change');
+			// action for 3rd party customization
+			acf.do_action('remove', $layout);
 			
 			
 			// remove
 			acf.remove_el( $layout, function(){
 				
+				// trigger change to allow attachment save
+				self.$input.trigger('change');
+			
+			
 				if( end_height > 0 ) {
 				
 					$message.show();
@@ -1539,11 +1522,12 @@
 			
 			// popup
 			var frame = acf.media.popup({
-				'title'		: acf._e('image', 'edit'),
-				'button'	: acf._e('image', 'update'),
-				'mode'		: 'edit',
-				'id'		: id,
-				'select'	: function( attachment ){
+				
+				title:		acf._e('image', 'edit'),
+				button:		acf._e('image', 'update'),
+				mode:		'edit',
+				id:			id,
+				select:		function( attachment ){
 					
 					// override url
 					if( acf.isset(attachment, 'attributes', 'sizes', self.o.preview_size, 'url') ) {
@@ -1652,21 +1636,24 @@
 			
 			
 			// vars
-			var library = this.o.library,
-				preview_size = this.o.preview_size;
+			var preview_size = this.o.preview_size;
 			
 			
 			// reference
-			var self = this;
+			var self = this,
+				$field = this.$field;
 			
 			
 			// popup
 			var frame = acf.media.popup({
+				
 				title:		acf._e('gallery', 'select'),
 				mode:		'select',
-				type:		'all',
+				type:		'',
+				field:		acf.get_field_key(this.$field),
 				multiple:	'add',
-				library:	library,
+				library:	this.o.library,
+				mime_types: this.o.mime_types,
 				
 				select: function( attachment, i ) {
 					
@@ -1674,6 +1661,10 @@
 					var atts = attachment.attributes;
 					
 					
+					// focus
+					self.doFocus($field);
+							
+							
 					// is image already in gallery?
 					if( self.get_attachment(atts.id).exists() ) {
 					

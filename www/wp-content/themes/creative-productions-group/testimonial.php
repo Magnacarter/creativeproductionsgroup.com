@@ -11,15 +11,15 @@
 		while ( $the_query->have_posts() ) : $the_query->the_post() ?>
 
 			<li>
-				<div class="testimonial_image grid-25">
-					<img src="<?php the_field( 'testimonial_image' ) ?>" height="175" width="175"/>
+				<div class="testimonial_image grid-20">
+					<img src="<?php the_field( 'testimonial_image' ) ?>"/>
 				</div>
 
-				<div class="testimonial grid-40">
+				<div class="testimonial grid-60">
 					<p><?php the_field( 'testimonial' ) ?></p>
 				</div>
 
-				<div class="testimonial_name grid-25">
+				<div class="testimonial_name grid-20">
 					<h3><?php the_field( 'name' ) ?></h3>
 					<p><?php the_field( 'company' ) ?></p>
 				</div>
