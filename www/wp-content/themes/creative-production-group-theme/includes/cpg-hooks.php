@@ -11,17 +11,18 @@
  * @action genesis
  */
 function cpg_page_content_loop() {
+	if( ! is_front_page() ) {
 	?>
 	<div class="page">
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post() ?>
 			<div class="page-content">
-				Hello world
 				<?php the_content() ?>
 			</div>
 		<?php endwhile; endif ?>
 	</div>
 	<?php
+	}
 }
 add_action( 'genesis_before_content', 'cpg_page_content_loop' );
 
