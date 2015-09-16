@@ -22,7 +22,6 @@ function cpg_page_content_loop() {
 		<?php endwhile; endif ?>
 	</div>
 	<?php
-	}
 }
 add_action( 'genesis_before_content', 'cpg_page_content_loop' );
 
