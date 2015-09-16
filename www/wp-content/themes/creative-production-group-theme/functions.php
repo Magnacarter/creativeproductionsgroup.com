@@ -33,8 +33,8 @@ require_once STYLESHEETPATH . '/includes/cpg-service-page-hooks.php';
 require_once STYLESHEETPATH . '/includes/cpg-contact-page-hooks.php';
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Altitude Pro Theme' );
-define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/altitude/' );
+define( 'CHILD_THEME_NAME', 'Creative Productions Group Theme' );
+define( 'CHILD_THEME_URL', 'https://creativeproductionsgroup.com' );
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Enqueue scripts and styles
@@ -48,6 +48,24 @@ function altitude_enqueue_scripts_styles() {
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'altitude-google-fonts', '//fonts.googleapis.com/css?family=Ek+Mukta:200,800', array(), CHILD_THEME_VERSION );
 }
+
+/**
+ * Add an acf options page
+ */
+if ( function_exists( 'acf_add_options_page' ) ) {
+	acf_add_options_page();
+}
+
+// Add Featured Image
+add_theme_support( 'post-thumbnails' );
+
+/**
+ * Change excerpt length
+ */
+function cpg_excerpt_length( $length ) {
+	return 15;
+}
+add_filter( 'excerpt_length', 'cpg_excerpt_length', 999 );
 
 /**
  * Excute php in text widget

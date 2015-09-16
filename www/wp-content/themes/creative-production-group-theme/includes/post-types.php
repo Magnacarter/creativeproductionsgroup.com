@@ -1,22 +1,22 @@
 <?php
 /**
- * Custom Post Type: Portfolio
+ * Custom Post Type: Video
  */
-function cpg_portfolio() {
+function cpg_video() {
 	$labels = array(
-		'name'               => 'portfolio',
-		'singular_name'      => 'portfolio',
+		'name'               => 'video',
+		'singular_name'      => 'video',
 		'add_new'            => 'Add New',
 		'add_new_item'       => 'Add New Featured',
-		'edit_item'          => 'Edit portfolio',
-		'new_item'           => 'New portfolio',
-		'all_items'          => 'All portfolio',
-		'view_item'          => 'View portfolio',
-		'search_items'       => 'Search portfolio',
+		'edit_item'          => 'Edit video',
+		'new_item'           => 'New video',
+		'all_items'          => 'All video',
+		'view_item'          => 'View video',
+		'search_items'       => 'Search video',
 		'not_found'          => 'No event found',
 		'not_found_in_trash' => 'No event found in Trash',
 		'parent_item_colon'  => '',
-		'menu_name'          => 'Portfolio',
+		'menu_name'          => 'Video',
 	);
 
 	$args = array(
@@ -26,8 +26,8 @@ function cpg_portfolio() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'portfolio' ),
 		'capability_type'    => 'post',
+		'rewrite'            => array( 'slug' => 'video' ),
 		'taxonomies'         => array( 'category', 'post_tag' ),
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -35,6 +35,6 @@ function cpg_portfolio() {
 		'supports'           => array( 'title', 'editor', 'thumbnail' ),
 	);
 
-register_post_type( 'portfolio', $args );
+register_post_type( 'video', $args );
 }
-add_action( 'init', 'cpg_portfolio' );
+add_action( 'init', 'cpg_video' );

@@ -142,11 +142,20 @@ Adam CSS
 }
 
 .slides img {
-	width: 200px;
+
 }
 
 #front-page-4 h1 {
 	font-weight: 600;
+}
+
+.project-categories ul {
+	text-align: center;
+}
+
+.project-categories ul li {
+	display: inline-block;
+	margin: 20px 5px;
 }
 
 /*
