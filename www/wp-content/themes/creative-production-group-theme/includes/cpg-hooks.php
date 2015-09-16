@@ -17,6 +17,7 @@ function cpg_page_content_loop() {
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post() ?>
 			<div class="page-content">
+				Hello world
 				<?php the_content() ?>
 			</div>
 		<?php endwhile; endif ?>
