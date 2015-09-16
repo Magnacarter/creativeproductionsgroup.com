@@ -11,7 +11,6 @@
  * @action genesis
  */
 function cpg_page_content_loop() {
-	if( ! is_front_page() ) {
 	?>
 	<div class="page">
 		<?php if ( have_posts() ) : ?>
