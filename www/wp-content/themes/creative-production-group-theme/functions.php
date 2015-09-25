@@ -20,18 +20,6 @@ require_once STYLESHEETPATH . '/includes/post-types.php';
 // cpg Hooks
 require_once STYLESHEETPATH . '/includes/cpg-hooks.php';
 
-// cpg About Page Hooks
-require_once STYLESHEETPATH . '/includes/cpg-about-page-hooks.php';
-
-// cpg Portfolio Page Hooks
-require_once STYLESHEETPATH . '/includes/cpg-portfolio-page-hooks.php';
-
-// cpg Service Page Hooks
-require_once STYLESHEETPATH . '/includes/cpg-service-page-hooks.php';
-
-// cpg Contact Page Hooks
-require_once STYLESHEETPATH . '/includes/cpg-contact-page-hooks.php';
-
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Creative Productions Group Theme' );
 define( 'CHILD_THEME_URL', 'https://creativeproductionsgroup.com' );
