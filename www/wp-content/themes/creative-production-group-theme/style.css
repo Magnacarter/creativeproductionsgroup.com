@@ -134,7 +134,74 @@ Defaults
 /*
 Adam CSS
 ---------------------------------------------------------------------------------------------------- */
+.website img, 
+.video img,
+.consult img {
+	width: 18%;
+}
 
+.slides img {
+
+}
+
+#front-page-4 h1 {
+	font-weight: 600;
+}
+
+.project-categories ul {
+	text-align: center;
+}
+
+.project-categories ul li {
+	display: inline-block;
+	margin: 20px 5px;
+}
+
+#single-project-content header img {
+	margin: 0 auto;
+	top: 30%;
+	left: 0;
+	right: 0;
+	width: 1200px;
+	max-height: 530px;
+}
+
+.single-project-title {
+	position: absolute;
+	margin: 0 auto;
+	top: 30%;
+	left: 5%;
+}
+
+.single-project-title h2 {
+	color: #ffffff;
+}
+
+.single-project-title h3 {
+	color: #ffffff;
+	padding-right: 20px;
+}
+
+.tint {
+	position: relative;
+	float: left;
+	cursor: pointer;
+}
+
+.tint:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 9px;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0, 0.5);
+	-moz-transition: background .3s linear;
+	-webkit-transition: background .3s linear;
+	-o-transition: background .3s linear;
+	transition: background .3s linear;
+}
 
 /*
 Adam CSS End
