@@ -17,8 +17,15 @@ get_header() ?>
 					<h3><?php the_excerpt() ?></h3>
 					<button>Learn More</button>
 				</div>
-			<?php endwhile ?>
 		</header>
+
+		<div class="single-project-content">
+			
+			<?php the_content() ?>
+
+		</div>
+
+		<?php endwhile ?>
 
 	</section>
 
