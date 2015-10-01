@@ -30,10 +30,21 @@ get_header() ?>
 		<?php while ( $projects->have_posts() ) : $projects->the_post(); $i++ ?>
 
 			<div class="archive-project <?php echo ( $i == 1 ) || ( $i == 4 ) || ( $i == 7 ) || ( $i == 10 ) ? 'one-third first' : 'one-third' ?>">
-				<a href="<?php echo esc_url( get_permalink() ) ?>">
+
+				<div class="archive-project-image">
+					<h4><?php the_title() ?><h4>
 					<?php the_post_thumbnail() ?>
-					<?php the_excerpt() ?>
-				</a>
+
+					<div class="archive-project-content">
+
+						<a href="<?php echo esc_url( get_permalink() ) ?>">
+							<?php the_excerpt() ?>
+						</a>
+
+					</div>
+
+				</div>
+
 			</div>
 
 		<?php endwhile; endif;

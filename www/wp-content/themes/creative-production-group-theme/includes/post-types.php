@@ -1,22 +1,22 @@
 <?php
 /**
- * Custom Post Type: Video
+ * Custom Post Type: Project
  */
-function cpg_video() {
+function cpg_project() {
 	$labels = array(
-		'name'               => 'video',
-		'singular_name'      => 'video',
+		'name'               => 'project',
+		'singular_name'      => 'project',
 		'add_new'            => 'Add New',
 		'add_new_item'       => 'Add New Featured',
-		'edit_item'          => 'Edit video',
-		'new_item'           => 'New video',
-		'all_items'          => 'All video',
-		'view_item'          => 'View video',
-		'search_items'       => 'Search video',
+		'edit_item'          => 'Edit project',
+		'new_item'           => 'New project',
+		'all_items'          => 'All project',
+		'view_item'          => 'View project',
+		'search_items'       => 'Search project',
 		'not_found'          => 'No event found',
 		'not_found_in_trash' => 'No event found in Trash',
 		'parent_item_colon'  => '',
-		'menu_name'          => 'Video',
+		'menu_name'          => 'Projects',
 	);
 
 	$args = array(
@@ -27,7 +27,7 @@ function cpg_video() {
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'capability_type'    => 'post',
-		'rewrite'            => array( 'slug' => 'video' ),
+		'rewrite'            => array( 'slug' => 'project' ),
 		'taxonomies'         => array( 'category', 'post_tag' ),
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -35,6 +35,6 @@ function cpg_video() {
 		'supports'           => array( 'title', 'editor', 'thumbnail' ),
 	);
 
-register_post_type( 'video', $args );
+register_post_type( 'project', $args );
 }
-add_action( 'init', 'cpg_video' );
+add_action( 'init', 'cpg_project' );
