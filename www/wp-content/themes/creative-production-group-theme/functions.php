@@ -52,7 +52,11 @@ add_theme_support( 'post-thumbnails' );
  * Change excerpt length
  */
 function cpg_excerpt_length( $length ) {
-	return 15;
+	if ( is_home() ) {
+		return 50;
+	} else {
+		return 15;
+	}
 }
 add_filter( 'excerpt_length', 'cpg_excerpt_length', 999 );
 
