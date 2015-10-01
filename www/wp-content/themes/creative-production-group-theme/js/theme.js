@@ -22,19 +22,22 @@ jQuery( document ).ready( function($) {
 //HP video to lightbox via the 'watch video' button.
 	var watch = $( '.watch' );
 	watch.click( function() {
-		froogaloop = $f( '#cpg-video' );
-		froogaloop.api('play');
+		var froogaloop = $f( '#vimeoWrap' );
+		froogaloop.api( 'play' );
+		var header = $( '.site-header' );
+		header.fadeOut();
 		$( '.site-inner' ).append( '<div id="wrapper"></div>' );
 		$( '#wrapper' ).show();
 		$( '#video-container' ).show();
-		$( '.x' ).show();
 	});
-	$( '.x' ).click( function() {
+	$( '#video-container' ).click( function() {
+		var header = $( '.site-header' );
 		$( '#wrapper' ).hide();
 		$( '#video-container' ).hide();
 		$( '.x' ).hide();
-		vimeoWrap = $('#vimeoWrap');
+		vimeoWrap = $( '#vimeoWrap' );
    		vimeoWrap.html( vimeoWrap.html() );
+   		header.fadeIn();
 	});
 
 });//Document ready end.

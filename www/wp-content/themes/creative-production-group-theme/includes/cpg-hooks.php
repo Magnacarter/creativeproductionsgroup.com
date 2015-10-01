@@ -18,7 +18,6 @@ function cpg_video_lightbox() {
 
 			<div id="vimeoWrap">
 				<div id="video-container">
-					<h1>hello world</h1>
 					<?php the_field( 'watch_video' ) ?>
 				</div>
 			</div>
