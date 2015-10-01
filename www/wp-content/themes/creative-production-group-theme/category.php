@@ -13,7 +13,9 @@ get_header() ?>
 
 	<?php
 
-	$category = get_category(get_query_var('cat') );
+	$cat = get_query_var( 'cat' );
+ 	$yourcat = get_category ( $cat );
+  	$category = $yourcat->slug;
 
 	$args = array(
 		'post_type' => 'project',
@@ -21,7 +23,7 @@ get_header() ?>
 			array(
 				'taxonomy' => 'category',
 				'field'    => 'slug',
-				'terms'    => $category,
+				'terms'	   => $category
 			),
 		),
 	);
@@ -29,8 +31,6 @@ get_header() ?>
 	$i = 0;
 
 	$projects = new WP_Query( $args );
-
-	$i = 0;
 
 	?>
 
