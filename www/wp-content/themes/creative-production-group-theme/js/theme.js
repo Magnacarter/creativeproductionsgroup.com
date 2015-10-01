@@ -21,24 +21,22 @@ jQuery( document ).ready( function($) {
 
 //HP video to lightbox via the 'watch video' button.
 	var watch = $( '.watch' );
-	watch.click( function( e ) {
-		var iframe = document.getElementById('video-container');
-		var player = $f(iframe);
-		player.api("play");
-		var header = $( '.site-header' );
+	var header = $( '.site-header' );
+	var iframe = jQuery('#vvq-62-vimeo-1')[0];
+	var player = $f( iframe );
+	watch.click( function(e) {
+		e.preventDefault();		
 		header.fadeOut();
 		$( '.site-inner' ).append( '<div id="wrapper"></div>' );
 		$( '#wrapper' ).show();
 		$( '#video-container' ).show();
+		player.api('play');
 	});
 	$( '#video-container' ).click( function() {
-		var header = $( '.site-header' );
+		header.fadeIn();
 		$( '#wrapper' ).hide();
 		$( '#video-container' ).hide();
-		$( '.x' ).hide();
-		vimeoWrap = $( '#vimeoWrap' );
-   		vimeoWrap.html( vimeoWrap.html() );
-   		header.fadeIn();
+		player.api('pause');
 	});
 
 });//Document ready end.
