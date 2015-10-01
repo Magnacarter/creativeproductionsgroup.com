@@ -24,19 +24,22 @@ jQuery( document ).ready( function($) {
 	var header = $( '.site-header' );
 	var iframe = jQuery('#vvq-62-vimeo-1')[0];
 	var player = $f( iframe );
+	var x = $( '.x' );
 	watch.click( function(e) {
 		e.preventDefault();		
 		header.fadeOut();
+		x.show();
 		$( '.site-inner' ).append( '<div id="wrapper"></div>' );
 		$( '#wrapper' ).show();
 		$( '#video-container' ).show();
 		player.api('play');
 	});
-	$( '#video-container' ).click( function() {
+	x.click( function() {
 		header.fadeIn();
 		$( '#wrapper' ).hide();
 		$( '#video-container' ).hide();
 		player.api('pause');
+		x.hide();
 	});
 
 });//Document ready end.
