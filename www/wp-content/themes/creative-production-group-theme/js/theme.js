@@ -21,7 +21,10 @@ jQuery( document ).ready( function($) {
 
 //HP video to lightbox via the 'watch video' button.
 	var watch = $( '.watch' );
-	watch.click( function() {
+	watch.click( function( e ) {
+		var iframe = document.getElementById('video-container');
+		var player = $f(iframe);
+		player.api("play");
 		var header = $( '.site-header' );
 		header.fadeOut();
 		$( '.site-inner' ).append( '<div id="wrapper"></div>' );
