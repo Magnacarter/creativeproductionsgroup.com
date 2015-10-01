@@ -270,6 +270,88 @@ Adam CSS
 	transition: background .3s linear;
 }
 
+/*===================================
+ *LightBox-for imgs and vids
+ ==================================*/
+#video-container {
+	display: none;
+	position: absolute;
+	z-index: 444;
+	height: 80%;
+	width: 80%;
+}
+
+#video-container iframe {
+	position: absolute;
+	top:10%;
+	left: 12%;
+	height: 100%;
+	width: 100%;
+}
+
+#wrapper {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: rgba(0, 0, 0, 0.7);
+	display:none;
+}
+
+#project_wrap {
+	position:fixed;
+	z-index: 333;
+	top: 0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: rgba(0, 0, 0, 0.8);
+	display:none;
+}
+
+.pro_img {
+	position: absolute;
+	top: 20%;
+	text-align: center;
+}
+
+.caption {
+	position: absolute;
+	left: 25%;
+	top: 70%;
+	z-index: 555;
+	color: #fff;
+	font-size: 1.1em;
+}
+
+#lightbox {
+	position: relative;
+	margin: auto;
+	top:60px;
+	height: 65%;
+	width: 80%;
+	overflow:hidden;
+	padding-bottom:10%;
+	border: 3px solid #fff;
+	border-radius: 3px;
+	background-color: black;
+	display: none;
+}
+
+.x {
+	margin: auto;
+	top: 100px;
+	left: 30px;
+	position: absolute;
+	z-index: 900;
+	display: none;
+}
+
+.x:hover {
+	cursor: pointer;
+}
+
 /*
 Adam CSS End
 ---------------------------------------------------------------------------------------------------- */
