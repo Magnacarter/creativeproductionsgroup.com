@@ -170,6 +170,13 @@ Adam CSS
 	font-weight: 600;
 }
 
+/* wp_list_categories() comes with the current-cat class */
+.current-cat a {
+	color: #22a1c4;
+	padding-bottom: 18px;
+	border-bottom: 3px solid #22a1c4;
+}
+
 .archive-project-image {
 	position: relative;
 }
