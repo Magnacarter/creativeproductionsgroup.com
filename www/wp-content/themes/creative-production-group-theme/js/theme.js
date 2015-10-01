@@ -22,14 +22,11 @@ jQuery( document ).ready( function($) {
 //HP video to lightbox via the 'watch video' button.
 	var watch = $( '.watch' );
 	watch.click( function() {
- 		var player = $("#cpg_111222333");
-        froogaloop = $f(player);
 		var header = $( '.site-header' );
 		header.fadeOut();
 		$( '.site-inner' ).append( '<div id="wrapper"></div>' );
 		$( '#wrapper' ).show();
 		$( '#video-container' ).show();
-		froogaloop.api('play');
 	});
 	$( '#video-container' ).click( function() {
 		var header = $( '.site-header' );
