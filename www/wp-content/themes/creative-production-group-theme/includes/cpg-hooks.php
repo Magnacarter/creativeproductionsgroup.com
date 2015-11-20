@@ -63,7 +63,7 @@ function cpg_worker_section() {
 								<div class="worker-content">
 									<h3><?php the_title() ?></h3>
 									<p><?php the_field( 'worker_position' ) ?></p>
-									<a href="<?php the_field( 'linkedin_url' ) ?>"><img src="<?php the_field( 'li_icon' ) ?>"></a>
+									<a target="_blank" href="<?php the_field( 'linkedin_url' ) ?>"><img src="<?php the_field( 'li_icon' ) ?>"></a>
 								</div>
 						</div>
 					</div>
