@@ -45,7 +45,7 @@ function cpg_worker_section() {
 			<section id="worker-section-wrap">
 				<div class="worker-section-title">
 					<h2>Meet some of our creative team</h2>
-					<h4>Dedicated | Talented | Focused</h4>
+					<h4>Dedicated | Talented | Focused | Happy</h4>
 				</div>
 
 				<?php 
