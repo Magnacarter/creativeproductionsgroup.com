@@ -31,7 +31,6 @@ function altitude_enqueue_scripts_styles() {
 
 	wp_enqueue_script( 'jsix-froogaloop' , get_stylesheet_directory_uri() . '/js/froogaloop.min.js', array('jquery'), '' , true);
 	wp_enqueue_script( 'cpg-theme-js', get_stylesheet_directory_uri() . '/js/theme.js', array( 'jquery' ), false, true );
-	wp_enqueue_script( 'cpg-slick-js', get_stylesheet_directory_uri() . '/js/slick.min.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'cpg-flexslider' , get_stylesheet_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery'), '' , true);
 	wp_enqueue_script( 'altitude-global', get_bloginfo( 'stylesheet_directory' ) . '/js/global.js', array( 'jquery' ), '1.0.0' );
 

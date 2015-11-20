@@ -280,6 +280,91 @@ button.learn:hover {
 	transition: background .3s linear;
 }
 
+/*----Worker section----*/
+#worker-section-wrap {
+	background-color: #000;
+}
+
+.worker-section-title {
+	padding: 50px;
+}
+
+#worker-section-wrap h2 {
+	font-size: 80px;
+    font-weight: 200;
+    line-height: 1;
+    color: #fff;
+}
+
+#worker-section-wrap h4 {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.single-worker {
+	margin: 0 !important;
+}
+
+.single-worker-img {
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+
+.single-worker-img img {
+	display: block;
+	width: 100%;
+}
+
+.worker-content img {
+	width: 50px;
+	margin-left: -10px;
+}
+
+.worker-content {
+	position: absolute;
+	padding-left: 10%;
+	text-align: left;
+	opacity: 0;
+	z-index: 2;
+	top: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	-webkit-transition: all 0.3s linear;
+       -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+
+#worker-section-wrap .single-worker:hover .worker-content {
+	opacity: 1;
+	-webkit-transition: all 0.3s linear;
+       -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+
+.worker-content h3 {
+	padding-top: 25%;
+}
+
+.worker-content h3,
+.worker-content p {
+	color: #fff;
+}
+
 /*===================================
  *LightBox-for imgs and vids
  ==================================*/
