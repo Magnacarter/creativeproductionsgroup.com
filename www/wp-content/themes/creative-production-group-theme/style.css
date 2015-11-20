@@ -336,7 +336,9 @@ input, select, textarea {
 
 .gfield_label,
 #input_4_1_3_container label,
-#input_4_1_6_container label {
+#input_4_1_6_container label,
+#input_3_1_3_container label,
+#input_3_1_6_container label {
 	display: none !important;
 }
 
