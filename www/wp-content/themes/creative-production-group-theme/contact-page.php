@@ -8,7 +8,7 @@ get_header() ?>
 		<header>
 			<?php while ( have_posts() ) : the_post() ?>
 				<div class="contact-title one-half first">
-					<h2>Consutlation Form</h2>
+					<h2>Consultation Form</h2>
 					<h3>Tell us about your project!</h3>
 					<button>Get Started</button>
 				</div>
