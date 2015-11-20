@@ -10,7 +10,7 @@ get_header() ?>
 				<div class="contact-title one-half first">
 					<h2>Consultation Form</h2>
 					<h3>Tell us about your project!</h3>
-					<button>Get Started</button>
+					<button class="consult-btn">Get Started</button>
 				</div>
 
 			<div class="contact-header-img one-half">
@@ -20,14 +20,16 @@ get_header() ?>
 			<div class="clearfix"></div>
 		</header>
 
-		<div class="contact-content">
-			
-			<?php the_content() ?>
+		<div class="contact-content-title">
+			<h1>Taking the first step of getting to know your goals and vision allows us to be able to get the creative gears turning from the get go.</h1>
+		</div>
 
+		<div class="contact-content">	
+			<?php the_content() ?>
 		</div>
 
 		<?php endwhile ?>
-
+		<div class="clearfix"></div>
 	</section>
 
 

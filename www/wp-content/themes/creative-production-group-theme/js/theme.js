@@ -19,6 +19,14 @@ jQuery( document ).ready( function($) {
 		}, 1000);
 	});
 
+//Scroll to next element consult page.
+	$( '.consult-btn' ).click( function() {
+		$( 'html, body' ).animate( {
+			//the minus 105 makes it not scroll all the way down to the target.
+			scrollTop: $( '.contact-content' ).offset().top -75
+		}, 1000);
+	});
+
 //HP video to lightbox via the 'watch video' button.
 	var watch = $( '.watch' );
 	var header = $( '.site-header' );
