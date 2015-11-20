@@ -334,6 +334,10 @@ input, select, textarea {
     width: 100%;
 }
 
+textarea {
+	width: 50% !important;
+}
+
 .gfield_label,
 #input_4_1_3_container label,
 #input_4_1_6_container label,
