@@ -472,6 +472,7 @@ textarea {
 .worker-content h3,
 .worker-content p {
 	color: #fff;
+	margin: 0;
 }
 
 /*===================================
