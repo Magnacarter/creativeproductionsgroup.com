@@ -88,6 +88,25 @@ function cpg_worker_section() {
 add_action( 'genesis_after_content', 'cpg_worker_section' );
 
 /**
+ *
+ *
+ *
+ */
+function cpg_contact_styles() {
+	if( is_page( 'contact' ) ) {
+		?>
+		<style type="text/css">
+			.site-inner {
+				max-width: none;
+				margin-top: 0;
+			}
+		</style>
+		<?php
+	}
+}
+add_action( 'genesis_before_header', 'cpg_contact_styles' );
+
+/**
  * Customize credits in the footer
  *
  * @filter genesis_footer_creds_text

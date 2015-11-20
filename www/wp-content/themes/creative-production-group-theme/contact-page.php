@@ -3,23 +3,24 @@
  * Template Name: Contact Page
  */
 get_header() ?>
-
-	<section id="single-project-content">
+	<section id="contact-content-wrap">
 
 		<header>
-			<div class="tint">
-				<?php the_post_thumbnail() ?>
-			</div>
-
 			<?php while ( have_posts() ) : the_post() ?>
-				<div class="single-project-title">
+				<div class="contact-title one-half first">
 					<h2>Consutlation Form</h2>
 					<h3>Tell us about your project!</h3>
 					<button>Get Started</button>
 				</div>
+
+			<div class="contact-header-img one-half">
+				<?php the_post_thumbnail() ?>
+			</div>
+
+			<div class="clearfix"></div>
 		</header>
 
-		<div class="single-project-content">
+		<div class="contact-content">
 			
 			<?php the_content() ?>
 
@@ -28,5 +29,6 @@ get_header() ?>
 		<?php endwhile ?>
 
 	</section>
+
 
 <?php get_footer() ?>

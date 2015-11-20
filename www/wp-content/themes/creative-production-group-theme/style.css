@@ -280,6 +280,33 @@ button.learn:hover {
 	transition: background .3s linear;
 }
 
+/*-----Contact page----*/
+#contact-content-wrap header {
+	background-color: #999;
+}
+
+.contact-header-img img {
+	display: block;
+	width: 100%;
+}
+
+.contact-title {
+	padding: 11% 10% 0 6%;
+}
+
+.contact-title h2 {
+	font-size: 50px;
+	color: #fff;
+}
+
+.contact-title h3 {
+	color: #fff;
+}
+
+.contact-content {
+	padding: 3% 20%;
+}
+
 /*----Worker section----*/
 #worker-section-wrap {
 	background-color: #000;
