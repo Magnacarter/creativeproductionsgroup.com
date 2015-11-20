@@ -40,6 +40,18 @@ function cpg_worker_section() {
 			.one-fourth {
 				width: 25%;
 			}
+
+			@media only screen and ( max-width: 1005px ) {
+				.one-fourth {
+					width: 50%;
+				}
+			}
+
+			@media only screen and ( max-width: 539px ) {
+				.one-fourth {
+					width: 100%;
+				}
+			}
 		</style>
 			<div class="clearfix"></div>
 			<section id="worker-section-wrap">
